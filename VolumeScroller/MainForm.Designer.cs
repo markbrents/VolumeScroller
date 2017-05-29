@@ -127,7 +127,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(226, 40);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Hoover the mouse over the icon and scroll the mouse wheel.";
+            this.label5.Text = "Hover the mouse over the icon and scroll the mouse wheel.";
             // 
             // pictureBox1
             // 

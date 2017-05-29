@@ -1,4 +1,5 @@
 ﻿using NAudio.CoreAudioApi;
+using System;
 
 namespace VolumeScroller
 {
@@ -7,6 +8,23 @@ namespace VolumeScroller
 
         private static MMDeviceEnumerator devEnum = new MMDeviceEnumerator();
         private static MMDevice defaultDevice = devEnum.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
+        public static event EventHandler VolumeChanged; 
+
+        static VolumeController()
+        {
+            defaultDevice.AudioEndpointVolume.OnVolumeNotification += AudioEndpointVolume_OnVolumeNotification;
+        }
+
+        private static void AudioEndpointVolume_OnVolumeNotification(AudioVolumeNotificationData data)
+        {
+            OnVolumeChanged();
+        }
+
+        private static void OnVolumeChanged()
+        {
+            if (VolumeChanged != null)
+                VolumeChanged(null, null);
+        }
 
         public static void UpVolume()
         {

@@ -17,8 +17,14 @@ namespace VolumeScroller
             InitializeComponent();
             UpdateIcon();
             SetHook();
+            VolumeController.VolumeChanged += VolumeController_VolumeChanged;
             this.Text = m_AppName;
             lblProgramTitle.Text = m_AppName;
+        }
+
+        private void VolumeController_VolumeChanged(object sender, EventArgs e)
+        {
+            UpdateIcon(); 
         }
 
         private void SetHook()
@@ -116,16 +122,6 @@ namespace VolumeScroller
         {
             this.Hide();
         }
-
-        //protected override void OnShown(EventArgs e)
-        //{
-        //    base.OnShown(e);
-        //    this.Hide();
-        //}
-        //protected override void OnShown(object sender, EventArgs e)
-        //{
-        //    this.Hide();
-        //}
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
