@@ -22,8 +22,8 @@ The next step was to control the volume. I was surprised how hard that turns out
 As I was testing the program I decided that I wanted a visual indicator of the volume as it changed. I ended up using Gimp to create several 16x16 icons, each with a different level indicated. Then as the volume changes the icon gets updated to the appropriate one.
 
 ## Known Issues/Future Items
-When volume is changed from somewhere else, the icon doesn't reflect the change 
 I need to create an installer that will put it in the user's startup. 
+
 I've only tested it on Windows 10 64-bit.
 
 ## Alternatives
