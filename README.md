@@ -1,3 +1,5 @@
+![Volume Scroller Logo](VolumeScrollerLogo32.png "Volume Scroller Logo")
+
 # Volume Scroller
 Volume Scroller is a program for controlling your computer’s audio volume via the mouse wheel. 
 Just hover your pointer over the icon in the system tray and scroll your wheel to adjust the volume. 
