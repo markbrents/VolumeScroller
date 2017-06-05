@@ -5,6 +5,9 @@ Volume Scroller is a program for controlling your computer’s audio volume via 
 Just hover your pointer over the icon in the system tray and scroll your wheel to adjust the volume. 
 You can also left-click on the icon to mute/unmute the volume.
 
+## Download
+You can download the latest release here https://github.com/markbrents/VolumeScroller/releases/download/v1.0.2/VolumeScrollerSetup.exe
+
 ## How it works 
 Volume Scroller is a Window Forms program written in C#. The Windows Forms NotifyIcon component makes it easy to put an icon into the system tray. And while it provides events to check mouse clicks, it does not provide a way to tell when the mouse wheel scrolls.
 
@@ -21,11 +24,9 @@ Hooking in Windows is a little complicated. Thankfully, there are .NET wrappers 
 The next step was to control the volume. I was surprised how hard that turns out to be from .NET. Thankfully, I ran across the [NAudio](https://github.com/naudio/NAudio) library that gives makes it easy. I created a simple static class (VolumeController) to wrap the things we need (Volume Up, Volume Down, Mute, etc.)
 
 ## Icon(s)
-As I was testing the program I decided that I wanted a visual indicator of the volume as it changed. I ended up using Gimp to create several 16x16 icons, each with a different level indicated. Then as the volume changes the icon gets updated to the appropriate one.
+As I was testing the program, I decided that I wanted a visual indicator of the volume as it changed. I ended up using Gimp to create several 16x16 icons, each with a different level indicated. Then as the volume changes the icon gets updated to the appropriate one.
 
 ## Known Issues/Future Items
-I need to create an installer that will put it in the user's startup. 
-
 I've only tested it on Windows 10 64-bit.
 
 ## Alternatives
