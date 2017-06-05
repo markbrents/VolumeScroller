@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblProgramTitle = new System.Windows.Forms.Label();
+            this.volumeScrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,22 +56,23 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.volumeScrollerToolStripMenuItem,
             this.exitToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(183, 98);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -149,6 +151,14 @@
             this.lblProgramTitle.TabIndex = 8;
             this.lblProgramTitle.Text = "_";
             // 
+            // volumeScrollerToolStripMenuItem
+            // 
+            this.volumeScrollerToolStripMenuItem.Enabled = false;
+            this.volumeScrollerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.volumeScrollerToolStripMenuItem.Name = "volumeScrollerToolStripMenuItem";
+            this.volumeScrollerToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.volumeScrollerToolStripMenuItem.Text = "Volume Scroller";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +201,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblProgramTitle;
+        private System.Windows.Forms.ToolStripMenuItem volumeScrollerToolStripMenuItem;
     }
 }
 

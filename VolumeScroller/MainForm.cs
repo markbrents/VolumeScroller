@@ -1,6 +1,7 @@
 ﻿using Gma.System.MouseKeyHook;
 using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace VolumeScroller
@@ -9,7 +10,6 @@ namespace VolumeScroller
     {
 
         private string m_AppName = "Volume Scroller";
-
         IKeyboardMouseEvents m_Global_Hook;
 
         public MainForm()
@@ -17,15 +17,12 @@ namespace VolumeScroller
             InitializeComponent();
             UpdateIcon();
             SetHook();
-            VolumeController.VolumeChanged += VolumeController_VolumeChanged;
+
             this.Text = m_AppName;
             lblProgramTitle.Text = m_AppName;
+            VolumeController.VolumeChanged += VolumeController_VolumeChanged;
         }
 
-        private void VolumeController_VolumeChanged(object sender, EventArgs e)
-        {
-            UpdateIcon(); 
-        }
 
         private void SetHook()
         {
@@ -54,6 +51,11 @@ namespace VolumeScroller
 
                 UpdateIcon(); 
             }
+        }
+
+        private void VolumeController_VolumeChanged(object sender, EventArgs e)
+        {
+            UpdateIcon(); 
         }
 
         private void UpdateIcon()
@@ -127,7 +129,6 @@ namespace VolumeScroller
         {
             this.Hide();
         }
-
 
     }
 }
