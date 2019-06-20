@@ -26,8 +26,10 @@ The next step was to control the volume. I was surprised how hard that turns out
 ## Icon(s)
 As I was testing the program, I decided that I wanted a visual indicator of the volume as it changed. I ended up using Gimp to create several 16x16 icons, each with a different level indicated. Then as the volume changes the icon gets updated to the appropriate one.
 
-## Known Issues/Future Items
-I've only tested it on Windows 10 64-bit.
+## Known Issues/Future Item
+I run it at work on Windows 10 Enterprise and at home on Windows 10 Home. 
+At work it runs for weeks with no problem. But at home it stops working sometimes. 
+I think it is losing the Windows hook somehow.
 
 ## Alternatives
 Here are some other programs that do similar things.
